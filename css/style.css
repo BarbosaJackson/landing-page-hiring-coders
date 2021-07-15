@@ -1,0 +1,17 @@
+.left {
+    background-color: white;
+    margin-top: 1px;
+    float: left;
+    width: 35%;
+    height: 500px;
+    margin-left: 50px;
+}
+
+.right {
+    background-color: white;
+    padding: 3px;
+    float: right;
+    margin-top: 1px;
+    width: 60%;
+    height: 494px;
+}
