@@ -2,13 +2,30 @@
     margin-left: 35%;
 }
 
+.tbody {
+    width: 100%;
+}
+
+.warning {
+    padding:12px;
+    color: #9F6000;
+    background-color: #FEEFB3;
+    font-size:1.5em;
+    vertical-align:middle;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 80%;
+    margin-left: 10%;
+    visibility: hidden;
+}
+
 .left {
     background-color: #4F4F4F;
     color: white;
     margin-top: 1px;
     float: left;
     width: 40%;
-    height: 500px;
+    height: 410px;
     margin-left: 50px;
 }
 .left h2, .right h2{
@@ -37,7 +54,7 @@
 .logo {
     font-weight: bold;
     margin-left: 25%;
-    margin-top: 30%;
+    margin-top: 15%;
 }
 
 .right {
@@ -57,9 +74,22 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: relative;
+    clear: both;
+    z-index: 900;
+    margin-top: -100px;
     bottom: 0;
     width: 100%;
+    margin-left: 30%;
+}
+
+footer .container {
+    padding-top: 5px;
+}
+
+.iconslink {
+    text-decoration: none;
+    color: white;
 }
 
 @font-face {
@@ -70,8 +100,58 @@ footer {
 * {
     font-family: space-gotesk;
 }
+.right input {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+input {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
 
 #submit-button {
-    background-color: #DC143C;
+    background-color: #FA8072;
     color: white;
+}
+
+#submit-button:hover {
+    opacity: 0.85;
+}
+
+input {
+    border-radius: 50px;
+    width: 90%;
+    height: 40px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+.fa-linkedin {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-github {
+    background: white;
+    color: black;
+
+}
+
+.fa:hover {
+    opacity: 0.8;
 }

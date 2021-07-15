@@ -7,34 +7,46 @@
     <script src="src/localStorageAPI.js"></script>
     <script src="src/send.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <h1 class="title">Vitruvian Store</h1>
-    <div class="left">
-        <h2>Black Friday</h2>
-        <p>A Vitruvian Store preparou uma surpresa nessa black friday</p>
-        <div class="logo">
-            <h1>Vitruvian Store</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+    <div class="warning" id="emailWarning"></div>
+    <div class="tbody">
+        <div class="left">
+            <h2>Black Friday</h2>
+            <p>A Vitruvian Store preparou uma surpresa nessa black friday</p>
+            <div class="logo">
+                <h1>Vitruvian Store</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
              width="100" height="100"
              viewBox="0 0 226 226"
              style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g fill="#ffffff"><path d="M40.68,0c-14.56641,0 -24.73641,4.96141 -31.075,10.02875c-6.33859,5.06734 -9.18125,10.59375 -9.18125,10.59375c-1.09469,2.26 -0.14125,4.97906 2.11875,6.07375c2.26,1.09469 4.97906,0.14125 6.07375,-2.11875c0,0 1.67734,-3.51359 6.63875,-7.48625c4.48469,-3.58422 11.88266,-6.95656 22.45875,-7.6275l76.13375,193.08875c0.44141,1.13 1.32422,2.03047 2.43656,2.52484c1.11234,0.47672 2.36594,0.47672 3.49594,0.01766l101.135,-39.55c2.34828,-0.90047 3.51359,-3.51359 2.61312,-5.86187c-0.90047,-2.34828 -3.51359,-3.51359 -5.86187,-2.61312l-97.03875,37.99625l-75.71,-192.24125c-0.68859,-1.73031 -2.38359,-2.84266 -4.2375,-2.825zM167.09875,0c-0.2825,0.07062 -0.58266,0.15891 -0.8475,0.2825l-92.3775,36.86625c-2.27766,0.91812 -3.40766,3.49594 -2.5425,5.79125l13.56,34.04125l12.995,32.34625c0.07063,0.2825 0.15891,0.58266 0.2825,0.8475c0.10594,0.30016 0.24719,0.58266 0.42375,0.8475l13.41875,33.9l12.85375,32.34625c0.44141,1.13 1.32422,2.03047 2.43656,2.52484c1.11234,0.47672 2.36594,0.47672 3.49594,0.01766l92.3775,-36.725c1.13,-0.44141 2.03047,-1.32422 2.52484,-2.43656c0.47672,-1.11234 0.47672,-2.36594 0.01766,-3.49594l-26.69625,-66.9525c-0.05297,-0.05297 -0.08828,-0.08828 -0.14125,-0.14125c-0.10594,-0.30016 -0.24719,-0.58266 -0.42375,-0.8475l-26.2725,-66.3875c-0.74156,-1.87156 -2.64844,-3.03687 -4.66125,-2.825c-0.14125,0 -0.2825,0 -0.42375,0zM165.40375,10.4525l23.4475,58.76l-11.3,4.52l-72.74375,28.815l-11.44125,-28.95625l-11.865,-29.80375zM144.9225,28.39125c-0.19422,0.03531 -0.38844,0.08828 -0.565,0.14125c-0.24719,0.07062 -0.47672,0.17656 -0.70625,0.2825l-33.6175,13.41875c-1.73031,0.38844 -3.07219,1.76563 -3.42531,3.51359c-0.35312,1.73031 0.35313,3.51359 1.78328,4.55531c1.43016,1.04172 3.35469,1.14766 4.89078,0.26484l33.6175,-13.2775c2.40125,-0.60031 3.88438,-3.00156 3.33703,-5.42047c-0.52969,-2.40125 -2.89562,-3.955 -5.31453,-3.47828zM192.24125,77.54625l23.30625,58.90125l-83.9025,33.335l-11.3,-28.25l-12.1475,-30.51l5.085,-1.9775zM172.0425,95.485c-0.19422,0.03531 -0.38844,0.08828 -0.565,0.14125c-0.38844,0.08828 -0.77688,0.22953 -1.13,0.42375l-33.6175,13.2775c-2.34828,0.93578 -3.47828,3.58422 -2.5425,5.9325c0.93578,2.34828 3.58422,3.47828 5.9325,2.5425l33.6175,-13.41875c2.45422,-0.47672 4.07859,-2.84266 3.60188,-5.29687c-0.47672,-2.45422 -2.84266,-4.07859 -5.29687,-3.60188zM85.88,180.8c-12.43,0 -22.6,10.17 -22.6,22.6c0,12.43 10.17,22.6 22.6,22.6c12.43,0 22.6,-10.17 22.6,-22.6c0,-12.43 -10.17,-22.6 -22.6,-22.6zM85.88,189.84c7.53922,0 13.56,6.02078 13.56,13.56c0,7.53922 -6.02078,13.56 -13.56,13.56c-7.53922,0 -13.56,-6.02078 -13.56,-13.56c0,-7.53922 6.02078,-13.56 13.56,-13.56z"></path></g></g></svg>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Seja o primeiro a saber</h2>
+            <p>preencha o formulário abaixo e nós o avisaremos</p>
+            <p>(*) são campos obrigatórios</p>
+            <div class="myform">
+                <input type="text" id="name" placeholder="Nome"/>
+                <div class="break-line"></div>
+                <input type="email" id="email" placeholder="Email (*)"/>
+                <div class="break-line"></div>
+                <input type="button" onclick="send()" value="Me avise" id="submit-button" />
+            </div>
         </div>
     </div>
-    <div class="right">
-        <h2>Seja o primeiro a saber</h2>
-        <p>preencha o formulário abaixo e nós o avisaremos</p>
-        <div class="myform">
-            <input type="text" id="name" />
-            <div class="break-line"></div>
-            <input type="text" id="email" />
-            <div class="break-line"></div>
-            <input type="button" onclick="send()" value="Me avise" id="submit-button" />
-        </div>
-    </div>
-
     <footer>
-        <a href="https://icons8.com/icon/2531/mover-por-carrinho">Mover por carrinho icon by Icons8</a>
+        <div class="container">
+            <p>Nos siga também nas redes sociais:</p>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-github"></a>
+        </div>
+        <div class="container">
+            <a href="https://icons8.com/icon/2531/mover-por-carrinho" class="iconslink">Mover por carrinho icon by Icons8</a>
+        </div>
     </footer>
 </body>
 </html>
